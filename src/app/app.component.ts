@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
   <app-toolbar></app-toolbar>
-  <app-size-buttons (increment)="incSize()" (decrement)="decSize()"></app-size-buttons>
-
   <app-progressive-image [width]="size" [height]="size" >
     <img appProgressiveImage [src]="src" class="mat-elevation-z6" />
 
@@ -38,17 +36,6 @@ export class AppComponent {
     '//via.placeholder.com/600x600',
     'DOES_NOT_EXIST'
   ];
-
-  incSize() {
-    this.size = this.size + 10;
-  }
-
-  decSize() {
-    this.size = this.size - 10;
-    if (this.size < 0) {
-      this.size = 0;
-    }
-  }
 
   next() {
     this.idx++;
