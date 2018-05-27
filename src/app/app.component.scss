@@ -1,0 +1,27 @@
+app-size-buttons,
+app-gallery-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0;
+}
+
+app-progressive-image {
+  margin: 0 auto;
+}
+
+.fallback,
+.placeholder {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fallback {
+  height: 800px; // directive will override this
+  background-color: var(--warn);
+}
+.placeholder {
+  height: 200px; // directive will override this
+  background-color: var(--primary);
+}

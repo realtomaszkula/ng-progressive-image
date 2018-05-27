@@ -1,11 +1,13 @@
 import {
+  AfterContentChecked,
   Component,
-  OnInit,
-  Input,
+  ContentChildren,
   HostBinding,
-  ContentChild
+  Input,
+  QueryList
 } from '@angular/core';
-import { DisplayService } from './display.service';
+import { Sizeable } from './directives/token';
+import { ImageStateService } from './image-state.service';
 
 @Component({
   selector: 'app-progressive-image',
@@ -13,9 +15,11 @@ import { DisplayService } from './display.service';
   <ng-content></ng-content>
   `,
   styles: [':host { display: block }'],
-  providers: [DisplayService]
+  providers: [ImageStateService]
 })
-export class ProgressiveImageComponent implements OnInit {
+export class ProgressiveImageComponent implements AfterContentChecked {
+  @ContentChildren(Sizeable) dirs: QueryList<Sizeable>;
+
   @HostBinding('style.height.px')
   @Input()
   height: number;
@@ -26,5 +30,10 @@ export class ProgressiveImageComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngAfterContentChecked() {
+    this.dirs.forEach(dir => {
+      dir.height = this.height;
+      dir.width = this.width;
+    });
+  }
 }

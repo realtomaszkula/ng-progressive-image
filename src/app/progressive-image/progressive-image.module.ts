@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { ProgressiveImageFallbackDirective } from './directives/progressive-image-fallback.directive';
+import { ProgressiveImagePlaceholderDirective } from './directives/progressive-image-placeholder.directive';
+import { ProgressiveImageDirective } from './directives/progressive-image.directive';
 import { ProgressiveImageComponent } from './progressive-image.component';
-import { ProgressiveImagePlaceholderDirective } from './progressive-image-placeholder.directive';
-import { ProgressiveImageFallbackDirective } from './progressive-image-fallback.directive';
-import { ProgressiveImageDirective } from './progressive-image.directive';
 
 @NgModule({
   imports: [CommonModule],
