@@ -29,9 +29,9 @@ export class AppComponent {
   private idx = 0;
   private images = [
     '//via.placeholder.com/175x200',
+    'DOES_NOT_EXIST',
     '//via.placeholder.com/200x200',
     '//via.placeholder.com/225x200',
-    'DOES_NOT_EXIST',
     '//via.placeholder.com/300x300',
     '//via.placeholder.com/600x600',
     'DOES_NOT_EXIST'

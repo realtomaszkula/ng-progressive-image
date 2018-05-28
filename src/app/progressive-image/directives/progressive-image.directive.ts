@@ -7,13 +7,13 @@ import {
   forwardRef
 } from '@angular/core';
 import { ImageStateService } from '../image-state.service';
-import { Sizeable, Display } from './token';
+import { Dimensions, Display } from './token';
 
 @Directive({
   selector: 'img[appProgressiveImage]',
   providers: [
     {
-      provide: Sizeable,
+      provide: Dimensions,
       useExisting: forwardRef(() => ProgressiveImageDirective)
     }
   ]

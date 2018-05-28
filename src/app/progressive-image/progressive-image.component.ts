@@ -6,7 +6,7 @@ import {
   Input,
   QueryList
 } from '@angular/core';
-import { Sizeable } from './directives/token';
+import { Dimensions } from './directives/token';
 import { ImageStateService } from './image-state.service';
 
 @Component({
@@ -18,7 +18,7 @@ import { ImageStateService } from './image-state.service';
   providers: [ImageStateService]
 })
 export class ProgressiveImageComponent implements AfterContentChecked {
-  @ContentChildren(Sizeable) dirs: QueryList<Sizeable>;
+  @ContentChildren(Dimensions) dirs: QueryList<Dimensions>;
 
   @HostBinding('style.height.px')
   @Input()

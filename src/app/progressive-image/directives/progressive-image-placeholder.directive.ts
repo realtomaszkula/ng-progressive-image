@@ -1,12 +1,12 @@
 import { Directive, HostBinding, OnInit, forwardRef } from '@angular/core';
 import { ImageStateService } from '../image-state.service';
-import { Display, Sizeable } from './token';
+import { Display, Dimensions } from './token';
 
 @Directive({
   selector: '[appProgressiveImagePlaceholder]',
   providers: [
     {
-      provide: Sizeable,
+      provide: Dimensions,
       useExisting: forwardRef(() => ProgressiveImagePlaceholderDirective)
     }
   ]
