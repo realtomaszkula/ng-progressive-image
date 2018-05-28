@@ -18,7 +18,7 @@ import { Dimensions, Display } from './token';
     }
   ]
 })
-export class ProgressiveImageDirective implements OnInit {
+export class ProgressiveImageDirective implements OnInit, Dimensions {
   @HostBinding('style.display') display = Display.flex;
   @HostBinding('style.width.px') width: number;
   @HostBinding('style.height.px') height: number;
