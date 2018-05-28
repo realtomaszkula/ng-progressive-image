@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-toolbar',
   template: `
   <mat-toolbar>
-    <button mat-button>Github</button>
+    <a mat-button [href]="'https://github.com/zetsnotdead/ng-progressive-image'" target="_bank" rel="noreferrer noopener">Github</a>
   </mat-toolbar>
   `,
   styles: []
