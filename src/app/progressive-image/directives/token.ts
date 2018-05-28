@@ -3,7 +3,6 @@ export enum Display {
   none = 'none'
 }
 export abstract class Dimensions {
-  display: Display;
   width: number;
   height: number;
 }
