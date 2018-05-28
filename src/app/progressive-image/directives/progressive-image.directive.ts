@@ -49,7 +49,7 @@ export class ProgressiveImageDirective implements OnInit, Dimensions {
 
   ngOnInit() {
     this.imageState.isLoaded$.subscribe(loaded => {
-      this.display = !loaded ? Display.none : Display.flex;
+      this.display = loaded ? Display.flex : Display.none;
     });
   }
 }
